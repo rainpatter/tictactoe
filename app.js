@@ -3,10 +3,12 @@ console.log('tictactoe')
 // vars
 const cells = document.querySelectorAll('.cell')
 const playerDisplay = document.querySelector('.player')
+const playerDiv = document.querySelector('.player-display')
 const resetBtn = document.querySelector('.reset')
 const gameRoundDisplay = document.querySelector('.round')
 const playerOneScore = document.querySelector('.player-1-score')
 const playerTwoScore = document.querySelector('.player-2-score')
+winningMessageSpan = document.querySelector('.winner-message')
 
 // initial game conditions
 const winningConditions = [
@@ -36,8 +38,9 @@ for (cell of cells) {
 }
 
 gameRoundDisplay.textContent = gameRound
-playerOneScore = player1Score
-playerTwoScore = player2Score
+playerOneScore.textContent = player1Score
+playerTwoScore.textContent = player2Score
+
 
 
 function playerClick(event) {
@@ -55,21 +58,20 @@ function playerClick(event) {
 
 function noughtOrCross(cell) {
     if (playerOne == 'X') {
-        console.log('player one')
         if (!cell.classList.contains('nought')) {   
-            cell.classList.add('cross')}
+            cell.classList.add('cross')
             playerOne = 'O'
             playerDisplay.textContent = "Player 2"
-
+        }
     } else {
         console.log('player two')
         if (!cell.classList.contains('cross')) {   
-            cell.classList.add('nought')}
+            cell.classList.add('nought')
             playerOne = 'X'
             playerDisplay.textContent = "Player 1"
-    }
+        }
+    } 
 }
-
 
 
 function checkWin(cellArray) {
@@ -90,14 +92,16 @@ function checkWin(cellArray) {
     console.log(checkArray)
     for (condition of winningConditions) {
         if (condition.every(item => checkArray.includes(item))) {
-            console.log('you won!')
             win = 1
+            playerDiv.style.visibility = 'hidden'
             if (cellContents == 'cross') {
                 player1Score += 1
                 playerOneScore.textContent = player1Score
+                winningMessageSpan.textContent = "Player 1 won!"
             } else {
                 player2Score += 1
                 playerTwoScore.textContent = player2Score
+                winningMessageSpan.textContent = "Player 2 won!"
             }
         }
     }
@@ -112,7 +116,6 @@ function checkDraw(cellArray) {
     }
     console.log(cellUsed)
     if (cellUsed.length === 9) {
-        console.log('draw')
         draw = 1
     }
 }
@@ -120,14 +123,12 @@ function checkDraw(cellArray) {
 function reset() {
     if (win === 1 | draw === 1) {
         resetBtn.style.visibility = "visible"
-        console.log('lets play again')
         resetBtn.addEventListener('click', reinitialiseBoard)
     }
 }
 
 
 function reinitialiseBoard() {
-    console.log('you reset')
     for (cell of cells) {
         cell.classList.remove('cross')
         cell.classList.remove('nought')
@@ -139,6 +140,8 @@ function reinitialiseBoard() {
     draw = 0
     gameRound += 1
     gameRoundDisplay.textContent = gameRound
+    winningMessageSpan.textContent = ""
+    playerDiv.style.visibility = 'visible'
 }
 // node list 
 // 

@@ -1,38 +1,55 @@
+
 .grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0;
-    width: 400px;
-    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    margin: 100px auto 20px auto;
     padding: 20 px;
 }
 
 .cell {
     background-color: mistyrose;
     border: 1px solid black;
-    padding: 60px 20px;
     text-align: center;
 }
 
 .cross {
-    background-color: red;
+    background-image: url('images/E0C6_color.png');
+    background-size: contain;
     border: 1px solid black;
-    padding: 60px 20px;
     text-align: center;
 }
 
 .nought {
-    background-color: green;
+    background-image: url('images/1F40D_color.png');
+    background-size: contain;
     border: 1px solid black;
-    padding: 60px 20px;
     text-align: center;
 }
 
 .player-display {
-    padding: 100px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.scores, .winner-wrapper {
+    margin: 10px auto auto 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.reset-wrapper {
     text-align: center
 }
 
 .reset {
     visibility: hidden;
+    background-color:aqua;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 auto;
 }
