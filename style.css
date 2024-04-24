@@ -20,3 +20,15 @@
     padding: 60px 20px;
     text-align: center;
 }
+
+.nought {
+    background-color: green;
+    border: 1px solid black;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.player-display {
+    padding: 100px;
+    text-align: center
+}
