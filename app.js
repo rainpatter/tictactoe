@@ -8,7 +8,10 @@ const resetBtn = document.querySelector('.reset')
 const gameRoundDisplay = document.querySelector('.round')
 const playerOneScore = document.querySelector('.player-1-score')
 const playerTwoScore = document.querySelector('.player-2-score')
-winningMessageSpan = document.querySelector('.winner-message')
+const winningMessageSpan = document.querySelector('.winner-message')
+const snakeAudio = new Audio('audio/snake-hissing-6092.mp3')
+const coffeeAudio = new Audio('audio/drink-sip-and-swallow-6974.mp3')
+
 
 // initial game conditions
 const winningConditions = [
@@ -104,10 +107,12 @@ function checkWin(cellArray) {
                 player1Score += 1
                 playerOneScore.textContent = player1Score
                 winningMessageSpan.textContent = "Player 1 won!"
+                coffeeAudio.play();
             } else {
                 player2Score += 1
                 playerTwoScore.textContent = player2Score
                 winningMessageSpan.textContent = "Player 2 won!"
+                snakeAudio.play();
             }
         }
     }
