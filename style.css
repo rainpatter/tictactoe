@@ -1,3 +1,26 @@
+body {
+    margin: 0 auto;
+    width: 70%
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.scores {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.scores div {
+    padding: 10px;
+}
 
 .grid {
     position: relative;
@@ -5,27 +28,27 @@
     grid-template-columns: repeat(3, 1fr);
     width: 500px;
     height: 500px;
-    margin: 100px auto 20px auto;
+    margin: 50px auto 20px auto;
     padding: 20 px;
 }
 
 .cell {
-    background-color: mistyrose;
-    border: 1px solid black;
+    border: 5px solid white;
     text-align: center;
+    background-color: #ecfaa7
 }
 
 .cross {
     background-image: url('images/E0C6_color.png');
     background-size: contain;
-    border: 1px solid black;
+    border: 5px solid white;
     text-align: center;
 }
 
 .nought {
     background-image: url('images/1F40D_color.png');
     background-size: contain;
-    border: 1px solid black;
+    border: 5px solid white;
     text-align: center;
 }
 
@@ -47,7 +70,7 @@
 
 .reset {
     visibility: hidden;
-    background-color:aqua;
+    background-color:#b1cc33;
     padding: 10px 20px;
     text-align: center;
     font-size: 30px;

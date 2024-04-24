@@ -32,14 +32,16 @@ let gameRound = 1
 let player1Score = 0
 let player2Score = 0
 
-// set up event handlers
-for (cell of cells) {
-    cell.addEventListener('click', playerClick)
-}
-
+// set up default display
 gameRoundDisplay.textContent = gameRound
 playerOneScore.textContent = player1Score
 playerTwoScore.textContent = player2Score
+
+
+// set up event handlers for cells
+for (cell of cells) {
+    cell.addEventListener('click', playerClick)
+}
 
 
 
@@ -62,6 +64,8 @@ function noughtOrCross(cell) {
             cell.classList.add('cross')
             playerOne = 'O'
             playerDisplay.textContent = "Player 2"
+        } else {
+            cell.style.animation = 'animate__shakeX'
         }
     } else {
         console.log('player two')
@@ -69,6 +73,8 @@ function noughtOrCross(cell) {
             cell.classList.add('nought')
             playerOne = 'X'
             playerDisplay.textContent = "Player 1"
+        } else {
+            cell.style.animation = 'animate__shakeX'
         }
     } 
 }
@@ -143,5 +149,3 @@ function reinitialiseBoard() {
     winningMessageSpan.textContent = ""
     playerDiv.style.visibility = 'visible'
 }
-// node list 
-// 
