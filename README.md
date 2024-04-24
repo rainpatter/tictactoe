@@ -1,5 +1,5 @@
-# Project Name
-This is a (topical) version of tic-tac-toe, featuring java(beans) for JavaScript, and snakes for Python. :snake: :coffee:
+# Java(script) and Pythons
+This is a (topical) version of tic-tac-toe, featuring java(beans) for JavaScript, and snakes for Python. :snake:  :coffee: Coffee beans represent crosses, and snakes represent noughts.
 
 ## :computer: [Click here](#) to see my live project!
 
