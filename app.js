@@ -3,6 +3,10 @@ console.log('tictactoe')
 // vars
 const cells = document.querySelectorAll('.cell')
 const playerDisplay = document.querySelector('.player')
+const resetBtn = document.querySelector('.reset')
+const gameRoundDisplay = document.querySelector('.round')
+const playerOneScore = document.querySelector('.player-1-score')
+const playerTwoScore = document.querySelector('.player-2-score')
 
 // initial game conditions
 const winningConditions = [
@@ -20,18 +24,30 @@ const winningConditions = [
 
 ]
 let playerOne = 'X'
+let win = 0
+let draw = 0
+let gameRound = 1
+let player1Score = 0
+let player2Score = 0
 
 // set up event handlers
 for (cell of cells) {
     cell.addEventListener('click', playerClick)
 }
 
+gameRoundDisplay.textContent = gameRound
+playerOneScore = player1Score
+playerTwoScore = player2Score
+
 
 function playerClick(event) {
     let clickedCell = event.target
     noughtOrCross(clickedCell)
     checkWin(cells)
+    console.log(win)
     checkDraw(cells)
+    console.log(draw)
+    reset()
 } 
 
 
@@ -57,9 +73,16 @@ function noughtOrCross(cell) {
 
 
 function checkWin(cellArray) {
-    checkArray = []
+    let checkArray = []
+    let cellContents = null
+    if (playerOne === 'O') {
+        cellContents = 'cross'
+    } else {
+        cellContents = 'nought'
+    }
+    console.log(cellContents)
     for (cell of cellArray) {
-        if (cell.classList.contains('cross')) {
+        if (cell.classList.contains(cellContents)) {
             toNumber = Number(cell.classList[1])
             checkArray.push(toNumber)
         }
@@ -68,6 +91,14 @@ function checkWin(cellArray) {
     for (condition of winningConditions) {
         if (condition.every(item => checkArray.includes(item))) {
             console.log('you won!')
+            win = 1
+            if (cellContents == 'cross') {
+                player1Score += 1
+                playerOneScore.textContent = player1Score
+            } else {
+                player2Score += 1
+                playerTwoScore.textContent = player2Score
+            }
         }
     }
 }
@@ -82,9 +113,32 @@ function checkDraw(cellArray) {
     console.log(cellUsed)
     if (cellUsed.length === 9) {
         console.log('draw')
+        draw = 1
+    }
+}
+
+function reset() {
+    if (win === 1 | draw === 1) {
+        resetBtn.style.visibility = "visible"
+        console.log('lets play again')
+        resetBtn.addEventListener('click', reinitialiseBoard)
     }
 }
 
 
+function reinitialiseBoard() {
+    console.log('you reset')
+    for (cell of cells) {
+        cell.classList.remove('cross')
+        cell.classList.remove('nought')
+    }
+    playerOne = 'X'
+    playerDisplay.textContent = "Player 1" 
+    resetBtn.style.visibility = "hidden"  
+    win = 0
+    draw = 0
+    gameRound += 1
+    gameRoundDisplay.textContent = gameRound
+}
 // node list 
 // 
