@@ -1,6 +1,6 @@
 console.log('tictactoe')
 
-// vars
+// const variables
 const cells = document.querySelectorAll('.cell');
 const playerDisplay = document.querySelector('.player');
 const playerDiv = document.querySelector('.player-display');
@@ -46,11 +46,6 @@ for (cell of cells) {
 
 // begin game
 beginGame()
-
-function textDisplay() {
-    
-}
-
 
 // functions
 // set up default display and default game states
