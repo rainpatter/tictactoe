@@ -1,5 +1,5 @@
 # Project Name
-The briefest description of my cool project and why you should all use it.
+This is a (topical) version of tic-tac-toe, featuring java(beans) for JavaScript, and snakes for Python. :snake: :coffee:
 
 ## :computer: [Click here](#) to see my live project!
 
@@ -7,9 +7,9 @@ The briefest description of my cool project and why you should all use it.
 - How to use my awesome project.
 - Download instructions (if relevant):
 ```zsh
-$ git clone my-awesome-app
-$ cd my-awesome-app
-$ node app.js
+$ git clone https://github.com/rainpatter/tictactoe.git
+$ cd tictactoe
+$ open index.html
 ```
 - Add in-app screenshots.
 
@@ -20,9 +20,9 @@ $ node app.js
 ![Wireframing](https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
 
 ## :rocket: Cool tech
-- Programming languages
-- Libraries
-- Animations
+- Programming languages: HTML, CSS, JavaScript
+- Images sourced from: https://openmoji.org/
+- Audio sourced from: https://pixabay.com/ 
 - Anything else you'd be proud to show your parents
 
 ## :scream: Bugs to fix :poop:
