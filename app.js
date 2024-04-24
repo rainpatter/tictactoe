@@ -47,6 +47,10 @@ for (cell of cells) {
 // begin game
 beginGame()
 
+function textDisplay() {
+    
+}
+
 
 // functions
 // set up default display and default game states
