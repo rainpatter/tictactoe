@@ -1,8 +1,22 @@
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20 px;
 }
 
 .cell {
+    background-color: mistyrose;
     border: 1px solid black;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cross {
+    background-color: red;
+    border: 1px solid black;
+    padding: 60px 20px;
+    text-align: center;
 }
