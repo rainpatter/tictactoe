@@ -4,11 +4,6 @@ This is a (topical) version of tic-tac-toe, featuring java(beans) for JavaScript
 ## [https://rainpatter.github.io/tictactoe/](#) to see my live project!
 
 ## About
-- How to use my awesome project.
-- Download instructions (if relevant):
-$ git clone https://github.com/rainpatter/tictactoe.git
-$ cd tictactoe
-$ open index.html
 ![screenshot 1](images/screenshot-1.png)
 ![screenshot 2](images/screenshot-2.png)
 
