@@ -80,7 +80,6 @@ function noughtOrCross(cell) {
             playerDisplay.textContent = "Player 2";
         } 
     } else {
-        console.log('player two')
         if (!cell.classList.contains('cross')) {   
             cell.classList.add('nought');
             playerOne = 'X';
@@ -98,7 +97,6 @@ function checkWin(cellArray) {
     } else {
         cellContents = 'nought';
     }
-    console.log(cellContents)
     for (cell of cellArray) {
         if (cell.classList.contains(cellContents)) {
             toNumber = Number(cell.classList[1]);
