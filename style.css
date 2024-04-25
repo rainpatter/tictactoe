@@ -1,26 +1,54 @@
-body {
-    margin: 0 auto;
-    width: 70%;
+
+html, body {
+    margin: 0;
+    height: 100%;
     font-family: 'Fira Code', verdana;
+    background-color: #ecfaa7;
+}
+
+.header-container {
+    width: 50%; 
+    margin: 20px auto 20px auto;
+} 
+
+.body-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.body-wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.column-1 {
+    margin: auto;
 }
 
 h1 {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 40px;
+    font-size: 50px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #a57939;
 }
 
 .scores {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid black;
-}
+    border: 3px solid #6a462f;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    color: #6a462f
+  }
 
 .scores div {
-    padding: 10px;
+    padding: 20px;
+    border: 1px solid #6a462f
 }
 
 .grid {
@@ -30,39 +58,43 @@ h1 {
     width: 500px;
     height: 500px;
     margin: 50px auto 20px auto;
-    padding: 20 px;
 }
 
 .cell {
-    border: 5px solid white;
+    border: 5px solid #ecfaa7;
     text-align: center;
-    background-color: #ecfaa7
+    background-color: #b1cc33;
 }
 
 .cross {
     background-image: url('images/E0C6_color.png');
     background-size: contain;
-    border: 5px solid white;
+    border: 5px solid #ecfaa7;
     text-align: center;
 }
 
 .nought {
     background-image: url('images/1F40D_color.png');
     background-size: contain;
-    border: 5px solid white;
+    border: 5px solid #ecfaa7;
     text-align: center;
 }
 
 .player-display {
+    margin: auto;
+    font-size: 35px;
     text-align: center;
-    font-size: 30px;
-    padding-top: 20px;
+    color: #6a462f;
+    font-weight: bold;
 }
 
-.scores, .winner-wrapper {
-    margin: 10px auto auto 10px;
-    font-size: 30px;
+
+.winner-wrapper {
+    font-size: 35px;
+    margin: auto;
     text-align: center;
+    color: #6a462f;
+    font-weight: bold;
 }
 
 .reset-wrapper {
@@ -71,14 +103,15 @@ h1 {
 
 .reset {
     visibility: hidden;
-    background-color:#b1cc33;
-    padding: 30px;
+    border: solid 5px #6a462f;
+    background-color:#5b9d30;
+    padding: 40px;
     text-align: center;
-    font-size: 30px;
-    margin: 0 auto;
-}
-
-span .let {
-    color: blue;
+    font-size: 40px;
+    margin: 20px auto 0 auto;
+    font-family: 'Fira Code', verdana;
+    color: #6a462f;
+    font-weight: bold;
+    border-radius: 10px;
 }
 

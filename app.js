@@ -136,6 +136,7 @@ function checkDraw(cellArray) {
     }
     if (cellUsed.length === 9) {
         draw = 1;
+        winningMessageSpan.textContent = "No winner!";
     }
 }
 

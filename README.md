@@ -1,37 +1,42 @@
 # Java(script) and Pythons
 This is a (topical) version of tic-tac-toe, featuring java(beans) for JavaScript, and snakes for Python. :snake:  :coffee: Coffee beans represent crosses, and snakes represent noughts.
 
-## :computer: [Click here](#) to see my live project!
+## [https://rainpatter.github.io/tictactoe/](#) to see my live project!
 
-## :page_facing_up: About
+## About
 - How to use my awesome project.
 - Download instructions (if relevant):
-```zsh
 $ git clone https://github.com/rainpatter/tictactoe.git
 $ cd tictactoe
 $ open index.html
-```
-- Add in-app screenshots.
+![screenshot 1]('images/Screenshot from 2024-04-25 18-46-42.png')
+![screenshot 2]('images/Screenshot from 2024-04-25 18-47-00.png')
 
-## :pencil2: Planning & Problem Solving
-- Talk about approach to the problem.
-- Add screenshots/drawings of doodles/plans during the planning phase.
-- Flow charts of app logic.
-![Wireframing](https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+## Planning & Problem Solving
 
-## :rocket: Cool tech
+- Basic wireframe
+![wireframe](images/wireframe.jpg)
+
+- Determine DOM variables (buttons, clickable elements, text to update)
+- Determine win states and game variables (e.g. player, win/draw, score, round)
+- Functions for: click handlers, switching players, checking win state, checking draw state, reinitialising game board
+- Win state function would feed in current player and check game board against possible win states
+- Draw state function would check not win and that all elements on board had been clicked
+
+## Scripting and media
 - Programming languages: HTML, CSS, JavaScript
 - Images sourced from: https://openmoji.org/
 - Audio sourced from: https://pixabay.com/ 
-- Anything else you'd be proud to show your parents
 
-## :scream: Bugs to fix :poop:
-- Anything a little broken
-- Anything a LOT broken
-- Buttons to not click too many times (cause its broken :unamused:)
+## Bugs to fix 
+- Only works on PC screens - didn't work on mobile formatting!
 
-## :sob: Lessons learnt
-What I would do differently if I could wind back the clock...
+## Lessons learnt
+- Plan layout of website prior to/alongside app scripting - this was more difficult to implement later
+- Think about screen layouts prior to starting
 
-## :white_check_mark: Future features
-Cool things I would add if I can keep working on this
+## Future features
+- Animations for win
+- Replace current player div with win state div (tried this but couldn't get it to work)
+- Improve CSS formatting 
+- Add in other game features i.e., AI opponent, try a tic-tac-toe variant
