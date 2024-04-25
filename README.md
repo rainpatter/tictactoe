@@ -9,8 +9,8 @@ This is a (topical) version of tic-tac-toe, featuring java(beans) for JavaScript
 $ git clone https://github.com/rainpatter/tictactoe.git
 $ cd tictactoe
 $ open index.html
-![screenshot 1]('images/Screenshot from 2024-04-25 18-46-42.png')
-![screenshot 2]('images/Screenshot from 2024-04-25 18-47-00.png')
+![screenshot 1](images/screenshot-1.png)
+![screenshot 2](images/screenshot-2.png)
 
 ## Planning & Problem Solving
 
